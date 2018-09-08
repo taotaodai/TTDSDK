@@ -26,7 +26,6 @@ android {
         }
         debug {
             minifyEnabled false
-            buildConfigField BOOLEAN, IS_SHOW_LOG, TRUE
         }
     }
 

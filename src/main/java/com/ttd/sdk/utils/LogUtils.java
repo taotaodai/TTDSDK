@@ -44,7 +44,7 @@ public class LogUtils {
     /**
      * 是否允许输出log
      */
-    private static int mDebuggable = BuildConfig.IS_SHOW_LOG ? LEVEL_VERBOSE : LEVEL_NONE;
+    private static int mDebuggable = LEVEL_VERBOSE;
 
     /**
      * 设置调试Log开关
