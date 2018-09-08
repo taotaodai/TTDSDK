@@ -1,8 +1,9 @@
-package com.zyw.horrarndoo.sdk.helper.okhttp;
+package com.ttd.sdk.helper.okhttp;
 
 
-import com.zyw.horrarndoo.sdk.utils.AppUtils;
-import com.zyw.horrarndoo.sdk.utils.NetworkConnectionUtils;
+
+import com.ttd.sdk.utils.AppUtils;
+import com.ttd.sdk.utils.NetworkConnectionUtils;
 
 import java.io.IOException;
 
@@ -11,7 +12,8 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static com.zyw.horrarndoo.sdk.utils.HttpUtils.getUserAgent;
+import static com.ttd.sdk.utils.HttpUtils.getUserAgent;
+
 
 /**
  * Created by Horrarndoo on 2017/9/12.

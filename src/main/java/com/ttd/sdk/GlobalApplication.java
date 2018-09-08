@@ -1,12 +1,10 @@
-package com.zyw.horrarndoo.sdk.global;
+package com.ttd.sdk;
 
+import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
-import com.mob.MobApplication;
-import com.orhanobut.logger.LogLevel;
-import com.orhanobut.logger.Logger;
-import com.zyw.horrarndoo.sdk.BuildConfig;
+import com.example.ttdsdk.BuildConfig;
 
 
 /**
@@ -15,7 +13,7 @@ import com.zyw.horrarndoo.sdk.BuildConfig;
  * 全局Application
  */
 
-public class GlobalApplication extends MobApplication {
+public class GlobalApplication extends Application {
     private static final String LOG_TAG = "YZ_LOGGER";
     protected static Context context;
     protected static Handler handler;
@@ -32,7 +30,7 @@ public class GlobalApplication extends MobApplication {
         context = getApplicationContext();
         handler = new Handler();
         mainThreadId = android.os.Process.myTid();
-        Logger.init(LOG_TAG).logLevel(BuildConfig.IS_SHOW_LOG ? LogLevel.FULL : LogLevel.NONE);
+//        Logger.init(LOG_TAG).logLevel(BuildConfig.IS_SHOW_LOG ? LogLevel.FULL : LogLevel.NONE);
     }
 
     /**

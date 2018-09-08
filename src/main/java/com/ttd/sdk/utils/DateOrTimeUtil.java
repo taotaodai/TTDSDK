@@ -1,4 +1,4 @@
-package com.chinajey.sdk.utils;
+package com.ttd.sdk.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -55,8 +55,8 @@ public class DateOrTimeUtil {
     //年月日时分秒毫秒，用于文件命名
     public static final String DATE_MODE_DETAIL = "yyyyMMddHHmmssSS";
 
-    public static final long MS_SECEND = 1000;
-    public static final long MS_MINUTE = MS_SECEND * 60;
+    public static final long MS_SECOND = 1000;
+    public static final long MS_MINUTE = MS_SECOND * 60;
     public static final long MS_HOUR = MS_MINUTE * 60;
     public static final long MS_DAY = MS_HOUR * 24;
 
@@ -109,7 +109,6 @@ public class DateOrTimeUtil {
                 return false;
             }
         } catch (ParseException e) {
-            L.showLogInfo(L.TAG_EXCEPTION, e.toString());
             return false;
         }
         return true;
@@ -131,7 +130,6 @@ public class DateOrTimeUtil {
             long l = sdf.parse(end).getTime() - sdf.parse(start).getTime();
             days = Math.round(l / MS_DAY);
         } catch (ParseException e) {
-            L.showLogInfo(L.TAG_EXCEPTION, e.toString());
             return days;
         }
         return days;
@@ -152,7 +150,6 @@ public class DateOrTimeUtil {
             long l = sdfEnd.parse(end).getTime() - sdfStart.parse(start).getTime();
             days = Math.round(l / MS_DAY);
         } catch (ParseException e) {
-            L.showLogInfo(L.TAG_EXCEPTION, e.toString());
             return days;
         }
         return days;
@@ -166,7 +163,6 @@ public class DateOrTimeUtil {
             long l = sdfEnd.parse(end).getTime() - sdfStart.parse(start).getTime();
             hours = Math.round(l / MS_HOUR);
         } catch (ParseException e) {
-            L.showLogInfo(L.TAG_EXCEPTION, e.toString());
             return hours;
         }
         return hours;
@@ -206,7 +202,7 @@ public class DateOrTimeUtil {
         StringBuilder sb = new StringBuilder();
         long hour = ms / MS_HOUR;
         long minute = (ms / MS_MINUTE) % 60;
-        long secend = (ms / MS_SECEND) % 60;
+        long secend = (ms / MS_SECOND) % 60;
 
         if (ms >= MS_HOUR) {
             sb.append(hour + ":");
@@ -239,7 +235,7 @@ public class DateOrTimeUtil {
         try {
             dateNew = sdfNew.format(sdfOld.parse(date));
         } catch (Exception e) {
-            L.showLogInfo(L.TAG_EXCEPTION, e.toString());
+            e.printStackTrace();
         }
         return dateNew;
     }
@@ -258,7 +254,7 @@ public class DateOrTimeUtil {
         try {
             dateNew = sdfNew.format(sdfOld.parse(date));
         } catch (ParseException e) {
-            L.showLogInfo(L.TAG_EXCEPTION, e.toString());
+            e.printStackTrace();
         }
         return dateNew;
     }
@@ -279,5 +275,37 @@ public class DateOrTimeUtil {
             }
         }
         return null;
+    }
+
+    public static String getTimeFormatText(Date date) {
+        if (date == null) {
+            return null;
+        }
+        long diff = System.currentTimeMillis() - date.getTime();
+        long r = 0;
+//        if (diff > year) {
+//            r = (diff / year);
+//            return r + "年前";
+//        }
+//        if (diff > month) {
+//            r = (diff / month);
+//            return r + "个月前";
+//        }
+        if (diff > MS_DAY * 3) {
+            return stampSecondToDate(date.getTime(),DATE_MODE_YMD_2);
+        }
+        if (diff > MS_DAY) {
+            r = (diff / MS_DAY);
+            return r + "天前";
+        }
+        if (diff > MS_HOUR) {
+            r = (diff / MS_HOUR);
+            return r + "个小时前";
+        }
+        if (diff > MS_MINUTE) {
+            r = (diff / MS_MINUTE);
+            return r + "分钟前";
+        }
+        return "刚刚";
     }
 }

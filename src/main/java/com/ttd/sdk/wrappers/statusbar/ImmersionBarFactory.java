@@ -1,4 +1,4 @@
-package com.chinajey.sdk.wrappers;
+package com.ttd.sdk.wrappers.statusbar;
 
 /**
  * Created by wt on 2018/6/7.

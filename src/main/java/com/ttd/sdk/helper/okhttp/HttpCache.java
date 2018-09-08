@@ -1,6 +1,7 @@
-package com.zyw.horrarndoo.sdk.helper.okhttp;
+package com.ttd.sdk.helper.okhttp;
 
-import com.zyw.horrarndoo.sdk.utils.AppUtils;
+
+import com.ttd.sdk.utils.AppUtils;
 
 import java.io.File;
 

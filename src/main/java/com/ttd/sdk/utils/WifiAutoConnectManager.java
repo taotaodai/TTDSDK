@@ -1,4 +1,4 @@
-package com.zyw.horrarndoo.sdk.utils;
+package com.ttd.sdk.utils;
 
 import android.content.Context;
 import android.net.wifi.ScanResult;

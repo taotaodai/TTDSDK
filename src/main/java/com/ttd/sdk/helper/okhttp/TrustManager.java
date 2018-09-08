@@ -1,4 +1,4 @@
-package com.zyw.horrarndoo.sdk.helper.okhttp;
+package com.ttd.sdk.helper.okhttp;
 
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;

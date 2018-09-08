@@ -1,8 +1,9 @@
-package com.zyw.horrarndoo.sdk.utils;
+package com.ttd.sdk.utils;
 
 import android.util.Log;
 
-import com.zyw.horrarndoo.sdk.BuildConfig;
+import com.example.ttdsdk.BuildConfig;
+
 
 /**
  * Created by Horrarndoo on 2017/4/5.

@@ -1,4 +1,4 @@
-package com.chinajey.sdk.wrappers;
+package com.ttd.sdk.wrappers.statusbar;
 
 import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
@@ -12,12 +12,14 @@ public class StatusBarOptions {
     private final float statusAlpha;
     private final int statusBarColor;
     private final int statusBarViewId;
+    private final int titleBarId;
 
     public StatusBarOptions(Builder builder) {
         this.isDarkFont = builder.isDarkFont;
         this.statusAlpha = builder.statusAlpha;
         this.statusBarColor = builder.statusBarColor;
         this.statusBarViewId = builder.statusBarViewId;
+        this.titleBarId = builder.titleBarId;
     }
 
     public boolean isDarkFont() {
@@ -32,6 +34,10 @@ public class StatusBarOptions {
         return statusBarColor;
     }
 
+    public int getTitleBarId() {
+        return titleBarId;
+    }
+
     public int getStatusBarViewId() {
         return statusBarViewId;
     }
@@ -41,6 +47,7 @@ public class StatusBarOptions {
         private float statusAlpha;
         private int statusBarColor;
         private int statusBarViewId;
+        private int titleBarId;
 
         public Builder setDarkFont(boolean darkFont) {
             isDarkFont = darkFont;
@@ -59,6 +66,11 @@ public class StatusBarOptions {
 
         public Builder setStatusBarViewId(@IdRes int statusBarViewId) {
             this.statusBarViewId = statusBarViewId;
+            return this;
+        }
+
+        public Builder setTitleBarId(int titleBarId) {
+            this.titleBarId = titleBarId;
             return this;
         }
 

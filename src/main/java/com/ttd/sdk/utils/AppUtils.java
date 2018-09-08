@@ -1,4 +1,4 @@
-package com.zyw.horrarndoo.sdk.utils;
+package com.ttd.sdk.utils;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -14,7 +14,8 @@ import android.util.Log;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import com.zyw.horrarndoo.sdk.global.GlobalApplication;
+
+import com.ttd.sdk.GlobalApplication;
 
 import java.io.File;
 
@@ -175,5 +176,29 @@ public class AppUtils {
             // 如果是子线程, 借助handler让其运行在主线程
             getHandler().post(r);
         }
+    }
+
+    public static boolean isFirstInstall(Context context) {
+        return getPackageFirstInstallTime(context) == getPackageLastUpdateTime(context);
+    }
+    public static long getPackageFirstInstallTime(Context context) {
+        String name = context.getPackageName();
+        long time = 0;
+        try {
+            time = context.getPackageManager().getPackageInfo(name, 0).firstInstallTime;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return time;
+    }
+    public static long getPackageLastUpdateTime(Context context) {
+        String name = context.getPackageName();
+        long time = 0;
+        try {
+            time = context.getPackageManager().getPackageInfo(name, 0).lastUpdateTime;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+            return time;
     }
 }

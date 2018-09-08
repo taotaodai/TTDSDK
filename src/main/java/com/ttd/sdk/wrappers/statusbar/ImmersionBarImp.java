@@ -1,4 +1,4 @@
-package com.chinajey.sdk.wrappers;
+package com.ttd.sdk.wrappers.statusbar;
 
 import android.app.Activity;
 
@@ -20,6 +20,9 @@ public class ImmersionBarImp implements ImmersionBarWrapper{
         }
         if(options.getStatusBarViewId() != 0){
             mImmersionBar.statusBarView(options.getStatusBarViewId());
+        }
+        if(options.getTitleBarId() != 0){
+            mImmersionBar.titleBar(options.getTitleBarId());
         }
         mImmersionBar.init();
     }

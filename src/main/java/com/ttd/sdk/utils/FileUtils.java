@@ -1,4 +1,4 @@
-package com.zyw.horrarndoo.sdk.utils;
+package com.ttd.sdk.utils;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -173,7 +173,7 @@ public class FileUtils {
      * @param saveResultCallback 保存结果callback
      */
     public static void saveImage(final Context context, final String fileName, final File file,
-                                final SaveResultCallback saveResultCallback) {
+                                 final SaveResultCallback saveResultCallback) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -184,9 +184,9 @@ public class FileUtils {
                 String saveFileName = "yizhi_pic";
                 if (fileName.contains(".png") || fileName.contains(".gif")) {
                     String fileFormat = fileName.substring(fileName.lastIndexOf("."));
-                    saveFileName = MD5Utils.getMD5("yizhi_pic" + fileName) + fileFormat;
+                    saveFileName = EncryptionUtils.encryptToMD5("yizhi_pic" + fileName) + fileFormat;
                 } else {
-                    saveFileName = MD5Utils.getMD5("yizhi_pic" + fileName) + ".png";
+                    saveFileName = EncryptionUtils.encryptToMD5("yizhi_pic" + fileName) + ".png";
                 }
                 saveFileName = saveFileName.substring(20);//取前20位作为SaveName
                 File savefile = new File(appDir, saveFileName);
@@ -235,7 +235,7 @@ public class FileUtils {
                 }
                 //                SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
                 // 设置以当前时间格式为图片名称
-                String saveFileName = MD5Utils.getMD5("yizhi_pic" + fileName) + ".png";
+                String saveFileName = EncryptionUtils.encryptToMD5("yizhi_pic" + fileName) + ".png";
                 saveFileName = saveFileName.substring(20);//取前20位作为SaveName
                 File file = new File(appDir, saveFileName);
                 try {

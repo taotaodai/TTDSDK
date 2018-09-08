@@ -1,4 +1,4 @@
-package com.chinajey.sdk.utils;
+package com.ttd.sdk.utils;
 
 import java.io.IOException;
 import java.security.MessageDigest;
@@ -12,8 +12,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 
 /**
@@ -364,7 +362,7 @@ public class EncryptionUtils {
         String hs = "";
         String stmp = "";
         for (int n = 0; n < b.length; n++) {
-            stmp = (java.lang.Integer.toHexString(b[n] & 0XFF));
+            stmp = (Integer.toHexString(b[n] & 0XFF));
             if (stmp.length() == 1) {
                 hs = hs + "0" + stmp;
             } else {
@@ -401,29 +399,29 @@ public class EncryptionUtils {
         return decryptedData;
     }
 
-    public static String encrypt(String input) throws Exception {
-        return base64Encode(desEncrypt(input.getBytes()));
-    }
-
-    public static String decrypt(String input) throws Exception {
-        byte[] result = base64Decode(input);
-        return new String(desDecrypt(result));
-    }
-
-    public static String base64Encode(byte[] s) {
-        if (s == null)
-            return null;
-        BASE64Encoder b = new BASE64Encoder();
-        return b.encode(s);
-    }
-
-    public static byte[] base64Decode(String s) throws IOException {
-        if (s == null)
-            return null;
-        BASE64Decoder decoder = new BASE64Decoder();
-        byte[] b = decoder.decodeBuffer(s);
-        return b;
-    }
+//    public static String encrypt(String input) throws Exception {
+//        return base64Encode(desEncrypt(input.getBytes()));
+//    }
+//
+//    public static String decrypt(String input) throws Exception {
+//        byte[] result = base64Decode(input);
+//        return new String(desDecrypt(result));
+//    }
+//
+//    public static String base64Encode(byte[] s) {
+//        if (s == null)
+//            return null;
+//        BASE64Encoder b = new BASE64Encoder();
+//        return b.encode(s);
+//    }
+//
+//    public static byte[] base64Decode(String s) throws IOException {
+//        if (s == null)
+//            return null;
+//        BASE64Decoder decoder = new BASE64Decoder();
+//        byte[] b = decoder.decodeBuffer(s);
+//        return b;
+//    }
 
     /**
      * 测试

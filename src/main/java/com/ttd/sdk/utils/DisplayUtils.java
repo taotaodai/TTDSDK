@@ -1,4 +1,4 @@
-package com.zyw.horrarndoo.sdk.utils;
+package com.ttd.sdk.utils;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,12 +13,14 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
 
+
 import com.bumptech.glide.Glide;
-import com.zyw.horrarndoo.sdk.R;
+import com.example.ttdsdk.R;
 
 import java.io.File;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
+
 
 /**
  * Created by Horrarndoo on 2017/8/31.

@@ -1,4 +1,4 @@
-package com.chinajey.sdk.wrappers;
+package com.ttd.sdk.wrappers.statusbar;
 
 import android.app.Activity;
 
@@ -7,7 +7,7 @@ import android.app.Activity;
  */
 
 public interface ImmersionBarWrapper {
-    void initImmersionBar(Activity activity,StatusBarOptions options);
+    void initImmersionBar(Activity activity, StatusBarOptions options);
 
     void destroy();
 }

@@ -1,10 +1,9 @@
-package com.zyw.horrarndoo.sdk.utils;
+package com.ttd.sdk.utils;
 
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.webkit.WebSettings;
 
-import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +67,7 @@ public class HttpUtils {
             imageSrcList.add(src);
         }
         if (imageSrcList.size() == 0) {
-            Logger.e("资讯中未匹配到图片链接");
+//            Logger.e("资讯中未匹配到图片链接");
             return null;
         }
         return imageSrcList.toArray(new String[imageSrcList.size()]);

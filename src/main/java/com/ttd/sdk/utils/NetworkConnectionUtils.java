@@ -1,4 +1,4 @@
-package com.zyw.horrarndoo.sdk.utils;
+package com.ttd.sdk.utils;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -15,7 +15,7 @@ import android.os.Build;
 import java.io.IOException;
 import java.util.List;
 
-import static com.zyw.horrarndoo.sdk.utils.LogUtils.e;
+import static com.ttd.sdk.utils.LogUtils.e;
 
 /**
  * Created by Horrarndoo on 2017/8/31.
