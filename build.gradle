@@ -45,7 +45,7 @@ dependencies {
 
     compile 'de.hdodenhof:circleimageview:2.2.0'
 
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
 
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
@@ -59,11 +59,11 @@ dependencies {
 
     // FlycoTabLayout 控件换肤支持
     compile 'skin.support:flycotablayout:2.1.2'
-    compile 'skin.support:skin-support:3.0.0'
+    compile 'skin.support:skin-support:3.1.0-beta1'
     // skin-support 基础控件支持
-    compile 'skin.support:skin-support-design:3.0.0'
-    compile 'skin.support:skin-support-cardview:3.0.0'
-    compile 'skin.support:skin-support-constraint-layout:3.0.0'
+    compile 'skin.support:skin-support-design:3.1.0-beta1'
+    compile 'skin.support:skin-support-cardview:3.1.0-beta1'
+    compile 'skin.support:skin-support-constraint-layout:3.1.0-beta1'
 
     //动画兼容库
     compile 'com.nineoldandroids:library:2.4.0'
@@ -79,6 +79,12 @@ dependencies {
     compile 'com.bm.photoview:library:1.4.1'
 
     compile 'org.greenrobot:eventbus:3.0.0'
+
+    compile 'com.annimon:stream:1.0.9'
+
+    compile 'com.github.LillteZheng:ViewPagerHelper:v0.8'
+    compile 'com.afollestad.material-dialogs:core:0.9.6.0'
+    compile 'com.afollestad.material-dialogs:commons:0.9.6.0'
 
     testCompile 'junit:junit:4.12'
     androidTestCompile('com.android.support.test.espresso:espresso-core:3.0.1', {
