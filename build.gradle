@@ -2,24 +2,20 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.3"
-
 
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
 
+
     buildTypes {
-        def BOOLEAN = "boolean"
-        def TRUE = "true"
-        def FALSE = "false"
-        def IS_SHOW_LOG = "IS_SHOW_LOG"
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -32,61 +28,62 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile ("com.android.support:appcompat-v7:${V7_APPCOMPAT_VERSION}")
-    compile "com.android.support:design:${V7_APPCOMPAT_VERSION}"
-    compile "com.android.support:cardview-v7:${V7_APPCOMPAT_VERSION}"
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api ("com.android.support:appcompat-v7:${V7_APPCOMPAT_VERSION}")
+    api "com.android.support:design:${V7_APPCOMPAT_VERSION}"
+    api "com.android.support:cardview-v7:${V7_APPCOMPAT_VERSION}"
 
     //沉浸式状态栏支持库
-    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+    api 'com.gyf.barlibrary:barlibrary:2.3.0'
 
-    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.1'
+    api 'com.ashokvarma.android:bottom-navigation-bar:2.0.1'
 
-    compile 'de.hdodenhof:circleimageview:2.2.0'
+    api 'de.hdodenhof:circleimageview:2.2.0'
 
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
 
-    compile 'com.squareup.retrofit2:retrofit:2.2.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    api 'com.squareup.retrofit2:retrofit:2.2.0'
 
-    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    api 'com.squareup.retrofit2:converter-gson:2.2.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    api 'com.squareup.okhttp3:okhttp:3.4.1'
+
+    api 'io.reactivex.rxjava2:rxjava:2.0.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
 
     // FlycoTabLayout 控件换肤支持
-    compile 'skin.support:flycotablayout:2.1.2'
-    compile 'skin.support:skin-support:3.1.0-beta1'
+    api 'skin.support:flycotablayout:2.1.2'
+    api 'skin.support:skin-support:3.1.0-beta1'
     // skin-support 基础控件支持
-    compile 'skin.support:skin-support-design:3.1.0-beta1'
-    compile 'skin.support:skin-support-cardview:3.1.0-beta1'
-    compile 'skin.support:skin-support-constraint-layout:3.1.0-beta1'
+    api 'skin.support:skin-support-design:3.1.0-beta1'
+    api 'skin.support:skin-support-cardview:3.1.0-beta1'
+    api 'skin.support:skin-support-constraint-layout:3.1.0-beta1'
 
     //动画兼容库
-    compile 'com.nineoldandroids:library:2.4.0'
+    api 'com.nineoldandroids:library:2.4.0'
 
-    compile 'me.yokeyword:fragmentation:1.1.6'
+    api 'me.yokeyword:fragmentation:1.1.6'
 
-    compile 'com.jakewharton:butterknife:8.8.1'
+    api 'com.jakewharton:butterknife:8.8.1'
 
-    compile 'com.github.bumptech.glide:glide:3.6.1'
-    compile 'com.github.bumptech.glide:okhttp-integration:1.3.1'
-    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    api 'com.github.bumptech.glide:glide:3.6.1'
+    api 'com.github.bumptech.glide:okhttp-integration:1.3.1'
+    api 'jp.wasabeef:glide-transformations:2.0.1'
 
-    compile 'com.bm.photoview:library:1.4.1'
+    api 'com.bm.photoview:library:1.4.1'
 
-    compile 'org.greenrobot:eventbus:3.0.0'
+    api 'org.greenrobot:eventbus:3.0.0'
 
-    compile 'com.annimon:stream:1.0.9'
+    api 'com.annimon:stream:1.0.9'
 
-    compile 'com.github.LillteZheng:ViewPagerHelper:v0.8'
-    compile 'com.afollestad.material-dialogs:core:0.9.6.0'
-    compile 'com.afollestad.material-dialogs:commons:0.9.6.0'
+    api 'com.github.LillteZheng:ViewPagerHelper:v0.8'
+    api 'com.afollestad.material-dialogs:core:0.9.6.0'
+    api 'com.afollestad.material-dialogs:commons:0.9.6.0'
 
-    testCompile 'junit:junit:4.12'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:3.0.1', {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
