@@ -40,19 +40,19 @@ public class RxHelper {
      * @param t
      * @return Flowable
      */
-    public static <T> Flowable<T> createFlowable(final T t) {
-        return Flowable.create(new FlowableOnSubscribe<T>() {
-            @Override
-            public void subscribe(FlowableEmitter<T> emitter) throws Exception {
-                try {
-                    emitter.onNext(t);
-                    emitter.onComplete();
-                } catch (Exception e) {
-                    emitter.onError(e);
-                }
-            }
-        }, BackpressureStrategy.BUFFER);
-    }
+//    public static <T> Flowable<T> createFlowable(final T t) {
+//        return Flowable.create(new FlowableOnSubscribe<T>() {
+//            @Override
+//            public void subscribe(FlowableEmitter<T> emitter) throws Exception {
+//                try {
+//                    emitter.onNext(t);
+//                    emitter.onComplete();
+//                } catch (Exception e) {
+//                    emitter.onError(e);
+//                }
+//            }
+//        }, BackpressureStrategy.BUFFER);
+//    }
 
     /**
      * 生成Observable
