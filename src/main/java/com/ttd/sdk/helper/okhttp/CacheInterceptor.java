@@ -16,7 +16,7 @@ import static com.ttd.sdk.utils.HttpUtils.getUserAgent;
 
 
 /**
- * Created by Horrarndoo on 2017/9/12.
+ * Created by wt on 2017/9/12.
  * <p>
  * CacheInterceptor
  */

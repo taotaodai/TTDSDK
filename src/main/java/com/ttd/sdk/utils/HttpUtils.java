@@ -1,7 +1,7 @@
 package com.ttd.sdk.utils;
 
 import android.os.Build;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.webkit.WebSettings;
 
 
@@ -11,7 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by Horrarndoo on 2017/9/18.
+ * Created by wt on 2017/9/18.
  * <p>
  * HttpUtils 主要用于获取UserAgent
  */

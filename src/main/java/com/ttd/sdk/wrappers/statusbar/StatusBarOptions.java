@@ -1,7 +1,7 @@
 package com.ttd.sdk.wrappers.statusbar;
 
-import android.support.annotation.ColorRes;
-import android.support.annotation.IdRes;
+import androidx.annotation.ColorRes;
+import androidx.annotation.IdRes;
 
 /**
  * Created by wt on 2018/6/7.

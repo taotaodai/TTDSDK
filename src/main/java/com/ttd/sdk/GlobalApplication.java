@@ -8,7 +8,7 @@ import com.example.ttdsdk.BuildConfig;
 
 
 /**
- * Created by Horrarndoo on 2017/9/1.
+ * Created by wt on 2017/9/1.
  * <p>
  * 全局Application
  */

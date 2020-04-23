@@ -23,7 +23,7 @@ import jp.wasabeef.glide.transformations.BlurTransformation;
 
 
 /**
- * Created by Horrarndoo on 2017/8/31.
+ * Created by wt on 2017/8/31.
  * <p>
  * 显示相关工具类
  */
@@ -148,16 +148,16 @@ public class DisplayUtils {
      * @param imgUrl    图片url
      * @param imageView 要显示的imageview
      */
-    public static void displayBlurImg(Context context, final String imgUrl, ImageView imageView) {
-        // "23":模糊度；"4":图片缩放4倍后再进行模糊
-        Glide.with(context)
-                .load(imgUrl)
-                .error(R.drawable.stackblur_default)
-                .placeholder(R.drawable.stackblur_default)
-                .crossFade(300)
-                .bitmapTransform(new BlurTransformation(context, 23, 4))
-                .into(imageView);
-    }
+//    public static void displayBlurImg(Context context, final String imgUrl, ImageView imageView) {
+//        // "23":模糊度；"4":图片缩放4倍后再进行模糊
+//        Glide.with(context)
+//                .load(imgUrl)
+//                .error(R.drawable.stackblur_default)
+//                .placeholder(R.drawable.stackblur_default)
+//                .crossFade(300)
+//                .bitmapTransform(new BlurTransformation(context, 23, 4))
+//                .into(imageView);
+//    }
 
     /**
      * 显示本地虚化图片
@@ -166,16 +166,16 @@ public class DisplayUtils {
      * @param file      本地图片file
      * @param imageView 要显示的imageview
      */
-    public static void displayBlurImg(Context context, File file, ImageView imageView) {
-        // "23":模糊度；"4":图片缩放4倍后再进行模糊
-        Glide.with(context)
-                .load(file)
-                .error(R.drawable.stackblur_default)
-                .placeholder(R.drawable.stackblur_default)
-                .crossFade(300)
-                .bitmapTransform(new BlurTransformation(context, 23, 4))
-                .into(imageView);
-    }
+//    public static void displayBlurImg(Context context, File file, ImageView imageView) {
+//        // "23":模糊度；"4":图片缩放4倍后再进行模糊
+//        Glide.with(context)
+//                .load(file)
+//                .error(R.drawable.stackblur_default)
+//                .placeholder(R.drawable.stackblur_default)
+//                .crossFade(300)
+//                .bitmapTransform(new BlurTransformation(context, 23, 4))
+//                .into(imageView);
+//    }
 
     /**
      * 显示资源虚化图片
@@ -184,14 +184,14 @@ public class DisplayUtils {
      * @param resourceId 图片资源id
      * @param imageView  要显示的imageview
      */
-    public static void displayBlurImg(Context context, Integer resourceId, ImageView imageView) {
-        // "23":模糊度；"4":图片缩放4倍后再进行模糊
-        Glide.with(context)
-                .load(resourceId)
-                .error(R.drawable.stackblur_default)
-                .placeholder(R.drawable.stackblur_default)
-                .crossFade(300)
-                .bitmapTransform(new BlurTransformation(context, 23, 4))
-                .into(imageView);
-    }
+//    public static void displayBlurImg(Context context, Integer resourceId, ImageView imageView) {
+//        // "23":模糊度；"4":图片缩放4倍后再进行模糊
+//        Glide.with(context)
+//                .load(resourceId)
+//                .error(R.drawable.stackblur_default)
+//                .placeholder(R.drawable.stackblur_default)
+//                .crossFade(300)
+//                .bitmapTransform(new BlurTransformation(context, 23, 4))
+//                .into(imageView);
+//    }
 }

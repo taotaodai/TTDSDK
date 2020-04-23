@@ -5,7 +5,7 @@ import android.app.Activity;
 import com.gyf.barlibrary.ImmersionBar;
 
 /**
- * Created by lml on 2018/6/7.
+ * Created by wt on 2018/6/7.
  */
 
 public class ImmersionBarImp implements ImmersionBarWrapper{

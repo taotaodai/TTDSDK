@@ -2,11 +2,9 @@ package com.ttd.sdk.utils;
 
 import android.util.Log;
 
-import com.example.ttdsdk.BuildConfig;
-
 
 /**
- * Created by Horrarndoo on 2017/4/5.
+ * Created by wt on 2017/4/5.
  * <p>
  * Log工具类
  */
