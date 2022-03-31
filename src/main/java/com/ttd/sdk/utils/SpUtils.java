@@ -3,7 +3,6 @@ package com.ttd.sdk.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -152,7 +151,7 @@ public class SpUtils {
      * @param <T>      item 类型
      */
     public static <T> void setDataList(String key, List<T> datalist) {
-        if (null == datalist || datalist.size() <= 0){
+        if (null == datalist || datalist.size() <= 0) {
             return;
         }
 
@@ -184,30 +183,12 @@ public class SpUtils {
             for (final JsonElement elem : array) {
                 datalist.add(gson.fromJson(elem, cls));
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         return datalist;
     }
 
-    public static int getThemeIndex(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getInt("ThemeIndex", 5);
-    }
 
-    public static void setThemeIndex(Context context, int index) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        prefs.edit().putInt("ThemeIndex", index).apply();
-    }
-
-    public static boolean getNightModel(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getBoolean("pNightMode", false);
-    }
-
-    public static void setNightModel(Context context, boolean nightModel) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        prefs.edit().putBoolean("pNightMode", nightModel).apply();
-    }
 }

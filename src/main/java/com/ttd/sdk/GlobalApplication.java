@@ -4,8 +4,6 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
-import com.example.ttdsdk.BuildConfig;
-
 
 /**
  * Created by wt on 2017/9/1.
@@ -14,15 +12,9 @@ import com.example.ttdsdk.BuildConfig;
  */
 
 public class GlobalApplication extends Application {
-    private static final String LOG_TAG = "YZ_LOGGER";
     protected static Context context;
     protected static Handler handler;
     protected static int mainThreadId;
-    private static GlobalApplication mApp;
-
-    public static synchronized GlobalApplication getInstance() {
-        return mApp;
-    }
 
     @Override
     public void onCreate() {
@@ -30,7 +22,6 @@ public class GlobalApplication extends Application {
         context = getApplicationContext();
         handler = new Handler();
         mainThreadId = android.os.Process.myTid();
-//        Logger.init(LOG_TAG).logLevel(BuildConfig.IS_SHOW_LOG ? LogLevel.FULL : LogLevel.NONE);
     }
 
     /**
